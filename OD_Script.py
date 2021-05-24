@@ -82,14 +82,19 @@ def Lolv1():
 def Lol():
     success, img = cap.read()
     img = cv2.flip(img, 1)
+    obj_stat = open("objectstatus.txt", "r")
+    os_var = int(obj_stat.read())
+    if os_var == 1:
+    	wind.controlVar2 = True
+
     if wind.controlVar2:
         global gc
         # Change Directory to where you want your images saved
         #path = 'Downloads\Object Detection\object-detection\CNN Training\Training Images'
         #print(cv2.imwrite(os.path.join(path , 'train_img_'+str(gc)+'.png'), img))
-        os.chdir('/home/dani/Downloads/self-supervised-robotic-grasping/CNN Training/Training Images')
+        os.chdir('/home/dani/catkin_ws/src/tutorials/CNN Training/Training Images')
         print("Image Write Success: ", cv2.imwrite(os.path.join('train_img_'+str(gc)+'.png'), img))
-        os.chdir('/home/dani/Downloads/self-supervised-robotic-grasping/detection-scripts')
+        os.chdir('/home/dani/catkin_ws/src/tutorials')
         cv2image = cv2.cvtColor(img, cv2.COLOR_BGR2RGBA)
         im = PIL.Image.fromarray(cv2image)
         im1 = im.convert('RGB')
@@ -97,11 +102,33 @@ def Lol():
         img_nn_mod = img_nn_mod.unsqueeze(0)  # if torch tensor
         outputs = model_ft(img_nn_mod)
         _, preds = torch.max(outputs, 1)
-        print("Prediction Class:", preds)
-        print("controlVar2 exiting")
-        gc = gc + 1
+        angle = int(preds) * 10
+        angle = angle - 90
+        angle = angle / 90
+        angle = angle * 0.25
+        print("Prediction Class:", int(preds) * 10)
+        print("Mapped Output: ", angle)
+        f = open("cnnoutput.txt", "w")
+        f.write(str(0.4) + "\n")
+        f.write(str(angle))
         f = open("gc_file.txt", "w")
         f.write(str(gc))
+        obj_stat = open("objectstatus.txt", "r")
+        os_var = int(obj_stat.read())
+        while os_var == 1:
+        	obj_stat = open("objectstatus.txt", "r")
+        	os_var = int(obj_stat.read())
+        	obj_stat.close
+        	time.sleep(3)
+        	
+        f = open("graspfeedback.txt", "r")
+        rnm_var = int(f.read())
+        os.chdir('/home/dani/catkin_ws/src/tutorials/CNN Training/Training Images')
+        os.rename(os.path.join('train_img_' + str(gc) + '.png'), os.path.join(str(rnm_var) + '_train_img_' + str(gc) + '.png'))
+        os.chdir('/home/dani/catkin_ws/src/tutorials')
+
+        gc = gc + 1
+        print("controlVar2 exiting")
         wind.controlVar2 = False
     blob = cv2.dnn.blobFromImage(img, 1/255, (whT, whT), [0,0,0], 1, crop = False)
     net.setInput(blob)
