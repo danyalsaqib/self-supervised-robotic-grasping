@@ -28,6 +28,7 @@ industries that will greatly benefit from a solution to this problem include the
 <p>The breaking down of learning process to numerous trainer robots curtails the input (energy consumption, equipment cost, time investment) and maximizes the output labeled data set. The hardware components include LEGO EV3 trainer robot kits that can work in a lab environment and can be trained on concerned objects to create novel data points. This expanding cloud of AI labelled data set would then be used by the end-effector robots that actually perform the automation tasks. The packaged software includes ROS as it is becoming increasingly popular to program robots. In a nutshell, the proposed project promises a complete package for industrial automation, probably the first time where the concept of what started with robot grasping now shakes hands with the industry in a much more scalable way.</p>
 
 <h2>Setup and Installation</h2>
-<p>The project involves 2 nodes - the PC and the LEGO EV3 Robot. Both of them require ROS to be installed on them. Our particular setup had Debian Linux installed on the EV3 LEGO Brick, and ROS Noetic on our Ubuntu Linux Machine. We will assume in this walkthrough that ROS is installed on both the EV3 Lego kit and on your PC. You can follow the links below for thorough guidance:</p>
-[Installing ROS on a LEGO EV3 Brick](http://wiki.ros.org/Robots/EV3)
-[Ubuntu install of ROS Noetic](http://wiki.ros.org/noetic/Installation/Ubuntu)
+<p>The project involves 2 nodes - the PC and the LEGO EV3 Robot. Both of them require ROS to be installed on them. Our particular setup had Debian Linux installed on the EV3 LEGO Brick, and ROS Noetic on our Ubuntu Linux Machine. We will assume in this walkthrough that ROS is installed on both the EV3 Lego kit and on your PC. You can follow the links below for thorough guidance:
+- [Installing ROS on a LEGO EV3 Brick](http://wiki.ros.org/Robots/EV3)
+- [Ubuntu install of ROS Noetic](http://wiki.ros.org/noetic/Installation/Ubuntu)
+</p>
