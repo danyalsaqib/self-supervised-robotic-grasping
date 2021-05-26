@@ -37,6 +37,8 @@ The LEGO EV3 kits are set up in such a way that we work with 3 motors, each conn
 
 Apart from the robot itself, a webcam is needed to act as the **robot's eyes**. While a laptop's built in webcam may theoretically work, we recommend working with a USB webcam, that can be set up appropriately so as to be able to clearly view the object.
 
+![setup](https://user-images.githubusercontent.com/60542092/119741202-ab1f5680-be9e-11eb-91bb-c7b68414094a.jpeg)
+
 ## Software Setup and Installation
 The project involves 2 nodes - the PC and the LEGO EV3 Robot. Both of them require ROS to be installed on them. Our particular setup had Debian Linux installed on the EV3 LEGO Brick, and ROS Noetic on our Ubuntu Linux Machine. We will assume in this walkthrough that ROS is installed on both the EV3 Lego kit and on your PC. You can follow the links below for thorough guidance:
 - Installing ROS on a LEGO EV3 Brick: http://wiki.ros.org/Robots/EV3
