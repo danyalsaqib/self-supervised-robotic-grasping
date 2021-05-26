@@ -29,6 +29,8 @@ industries that will greatly benefit from a solution to this problem include the
 
 <h2>Setup and Installation</h2>
 <p>The project involves 2 nodes - the PC and the LEGO EV3 Robot. Both of them require ROS to be installed on them. Our particular setup had Debian Linux installed on the EV3 LEGO Brick, and ROS Noetic on our Ubuntu Linux Machine. We will assume in this walkthrough that ROS is installed on both the EV3 Lego kit and on your PC. You can follow the links below for thorough guidance:
-- [Installing ROS on a LEGO EV3 Brick](http://wiki.ros.org/Robots/EV3)
-- [Ubuntu install of ROS Noetic](http://wiki.ros.org/noetic/Installation/Ubuntu)
+<ul>
+<li>[Installing ROS on a LEGO EV3 Brick](http://wiki.ros.org/Robots/EV3)</li>
+<li>- [Ubuntu install of ROS Noetic](http://wiki.ros.org/noetic/Installation/Ubuntu)</li>
+</ul>
 </p>
