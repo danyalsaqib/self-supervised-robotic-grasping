@@ -35,8 +35,8 @@ industries that will greatly benefit from a solution to this problem include the
 <li>Installing Catkin: http://wiki.ros.org/catkin</li>
 </ul>
 After ROS has been installed on both the machines, the next step is to make a new catkin workspace. On your PC, open up the terminal and run the following commands:
-```
+<code>
 lol.no
 pol.no
-```
+</code>
 </p>
