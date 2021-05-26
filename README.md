@@ -28,7 +28,16 @@ The goal of this project, as mentioned earlier, is to minimize and eliminate the
 
 The breaking down of learning process to numerous trainer robots curtails the input (energy consumption, equipment cost, time investment) and maximizes the output labeled data set. The hardware components include LEGO EV3 trainer robot kits that can work in a lab environment and can be trained on concerned objects to create novel data points. This expanding cloud of AI labelled data set would then be used by the end-effector robots that actually perform the automation tasks. The packaged software includes ROS as it is becoming increasingly popular to program robots. In a nutshell, the proposed project promises a complete package for industrial automation, probably the first time where the concept of what started with robot grasping now shakes hands with the industry in a much more scalable way.
 
-## Setup and Installation
+## Hardware Setup
+The LEGO EV3 kits are set up in such a way that we work with 3 motors, each connected to a port of the EV3 brick. One port of the EV3 is also connected with an ultrasonic sensor. The following mapping outlines how each of these components are connected.
+- EV3 Brick Port A ---> Motor for moving claw up and down
+- EV3 Brick Port B ---> Motor for rotating claw
+- EV3 Brick Port A ---> Motor for opening and closing jaws
+- EV3 Brick Port 1 ---> Ultrasonic sensor for object detection
+
+Apart from the robot itself, a webcam is needed to act as the **robot's eyes**. While a laptop's built in webcam may theoretically work, we recommend working with a USB webcam, that can be set up appropriately so as to be able to clearly view the object.
+
+## Software Setup and Installation
 The project involves 2 nodes - the PC and the LEGO EV3 Robot. Both of them require ROS to be installed on them. Our particular setup had Debian Linux installed on the EV3 LEGO Brick, and ROS Noetic on our Ubuntu Linux Machine. We will assume in this walkthrough that ROS is installed on both the EV3 Lego kit and on your PC. You can follow the links below for thorough guidance:
 - Installing ROS on a LEGO EV3 Brick: http://wiki.ros.org/Robots/EV3
 - Ubuntu install of ROS Noetic: http://wiki.ros.org/noetic/Installation/Ubuntu
