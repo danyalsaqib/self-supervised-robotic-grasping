@@ -18,7 +18,7 @@ Many approaches traditionally used human-labeled data to train the Neural Networ
 acted as a bottleneck in this approach. Labeling will always be biased due to semantics involved, and there can be multiple approaches to grasp a certain object. Human labeling is
 also a tedious and time consuming work. All of these reasons mean that ‘human generated data’ is not a scalable solution.
 
-Hence, the problem this project aims to solve, is the **elimination of human involvement – data labeling and human bias – from the training process of robotic grasping**. This means that the main objective of this project is to **create ‘Self Supervised Robots’, that can effectively solve the robotic grasping problem using minimal amount of human involvement**, while also keeping in mind the usual engineering problem of minimizing energy consumption and reducing equipment costs.
+Hence, the problem this project aims to solve, is the ***elimination of human involvement – data labeling and human bias – from the training process of robotic grasping***. This means that the main objective of this project is to ***create ‘Self Supervised Robots’, that can effectively solve the robotic grasping problem using minimal amount of human involvement***, while also keeping in mind the usual engineering problem of minimizing energy consumption and reducing equipment costs.
 
 A successful and scalable solution to the robotics grasping problem will have a huge amount of potential both in academia and in industry. In academia, the solution would mean a push towards research in areas such as automated industrial processes control, system design for material processing, and human motor control etc. However, it is the industry that will perhaps be the biggest benefactor of the solution of this problem. Fast growing industries such as E-Commerce have a huge demand of robots that are able to grasp a variety of objects in order to fully automate the process. Robots are providing far greater flexibility and dramatically expediting the Return on Investment (ROI) of warehouse automation. Other
 industries that will greatly benefit from a solution to this problem include the food industry (automating food packaging and processing), toy industry (grasping and classifying plastic parts), storage and logistics applications (automated stocking and transportation of products), and automotive manufacturing (robotic assemblies). Other indigenous projects that will benefit from such a robot include automating systems such as litter-picking robots, and automated robots in the service industry to name a few.
@@ -35,7 +35,7 @@ The LEGO EV3 kits are set up in such a way that we work with 3 motors, each conn
 - EV3 Brick Port A ---> Motor for opening and closing jaws
 - EV3 Brick Port 1 ---> Ultrasonic sensor for object detection
 
-Apart from the robot itself, a webcam is needed to act as the **robot's eyes**. While a laptop's built in webcam may theoretically work, we recommend working with a USB webcam, that can be set up appropriately so as to be able to clearly view the object.
+Apart from the robot itself, a webcam is needed to act as the ***robot's eyes***. While a laptop's built in webcam may theoretically work, we recommend working with a USB webcam, that can be set up appropriately so as to be able to clearly view the object.
 
 ![setup](https://user-images.githubusercontent.com/60542092/119741202-ab1f5680-be9e-11eb-91bb-c7b68414094a.jpeg "The Hardware Setup")
 
@@ -66,7 +66,7 @@ Firstly, to access the robot via any one of your PC terminals, connect the LEGO 
 ```
 ssh robot@ev3dev.local
 ```
-You will now be asked to enter a password. This password is **maker** by default, but you may have changed it for your particular setup. Enter the password, and you will be able to access the robot's files. Here, again run the following commands:
+You will now be asked to enter a password. This password is ***maker*** by default, but you may have changed it for your particular setup. Enter the password, and you will be able to access the robot's files. Here, again run the following commands:
 ```
 $ mkdir -p ~/catkin_ws/src
 $ cd ~/catkin_ws/
@@ -102,7 +102,7 @@ On this terminal, run the following commands
 $ cd ~catkin_ws/src/tutorials
 $ python3 OD_Script.py
 ```
-A GUI window will popup. Click the 'Click to start Object Detection' button on the GUI, which will open your webcam and start running the **YOLOv4 object detector** on your webcam. This will also initiate the CNN prediction for objects that will be grasped. Again, leave this terminal running up.
+A GUI window will popup. Click the 'Click to start Object Detection' button on the GUI, which will open your webcam and start running the ***YOLOv4 object detector*** on your webcam. This will also initiate the CNN prediction for objects that will be grasped. Again, leave this terminal running up.
 
 ### Terminal 3
 On this terminal, run the following commands:
@@ -147,5 +147,5 @@ If you have successfully completed all of the previous steps, your setup is comp
 ![Dataset Multiplication](https://user-images.githubusercontent.com/60542092/119741267-cdb16f80-be9e-11eb-80a8-5531a4560cf9.PNG "Dataset Generation and Multiplication")
  
 ## FAQs and Troubleshooting
-- **When I click the 'Click to start Object Detection' button, I get an error.**
+- ***When I click the 'Click to start Object Detection' button, I get an error.***
     - On the PC, open the file 'catkin_ws/src/tutorials/OD_Script.py'. Here on line 41, notice the code `cap = cv2.VideoCapture(0)`. Try changing this value from 0 to 1,2,3.. etc.
