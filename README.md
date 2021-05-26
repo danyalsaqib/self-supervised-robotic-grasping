@@ -39,3 +39,89 @@ $ mkdir -p ~/catkin_ws/src
 $ cd ~/catkin_ws/
 $ catkin_make
 ```
+After running these commands, you should have a new catkin workspace that has various subdirectories. To set the files up on PC, copy all of the files from the 'PC Files' folder of this repository, and copy them into the directory 'catkin_ws/src/tutorials'. Create this directory if it hasn't already been created using the following commands:
+```
+$ cd catkin_ws/src
+$ mkdir tutorials
+```
+After all of the files have been copied to this directory, run the following lines on the terminal again:
+```
+cd ~catkin_ws
+catkin_make
+```
+Hopefully, we should be all set up now on the PC. We will now move on to setting stuff up on the robot.
+
+Firstly, to access the robot via any one of your PC terminals, connect the LEGO EV3 brick to your PC via the USB cable, and run the following command from your Ubuntu machine:
+```
+ssh robot@ev3dev.local
+```
+You will now be asked to enter a password. This password is **maker** by default, but you may have changed it for your particular setup. Enter the password, and you will be able to access the robot's files. Here, again run the following commands:
+```
+$ mkdir -p ~/catkin_ws/src
+$ cd ~/catkin_ws/
+$ catkin_make
+```
+Now, you will have to either copy the 'Robot Files' folder of this repository, and copy them into the directory 'catkin_ws/src/tutorials/scripts'. If you cannot directly copy these files into the robot, simple create these files manually in the directory using the `nano` command, for example `nano reset.py`, and copy the text from this github repository's files into these manually created files. Create this directory if it hasn't already been created using the following commands:
+```
+$ cd catkin_ws/src
+$ mkdir tutorials
+$ cd tutorials
+$ mkdir scripts
+```
+After all of the files are successfully copied onto the robot, run the following command:
+```
+cd ~catkin_ws
+catkin_make
+```
+Wait for the `catkin_make` to complete. After that has been complete, we are ready to run our complete setup for self supervised robotic grasping.
+
+## Running the Setup
+To run the complete setup, 5 separate terminals are needed. We will be running 4 different python files on 4 different terminals, and the 5th terminal will be running the roscore.
+
+### Terminal 1
+On the first terminal run the following command:
+```
+$ roscore
+```
+On this terminal, the roscore will start running. The roscore is what enables communication between the robot and the PC. Leave the roscore running on this terminal.
+
+### Terminal 2
+On this terminal, run the following commands
+```
+$ cd ~catkin_ws/src/tutorials
+$ python3 OD_Script.py
+```
+A GUI window will popup. Click the 'Click to start Object Detection' button on the GUI, which will open your webcam and start running the **YOLOv4 object detector** on your webcam. This will also initiate the CNN prediction for objects that will be grasped. Again, leave this terminal running up.
+
+### Terminal 3
+On this terminal, run the following commands:
+```
+$ cd ~catkin_ws/src/tutorials
+$ rosrun tutorials nodeA.py
+```
+This will start up the ROS node on your PC for communication with your EV3 robot setup.
+
+### Terminal 4
+On this terminal, you will have to enter the robot using the following command:
+```
+$ ssh robot@ev3dev.local
+```
+Enter the password to access the robot. After the robot has been successfully accessed, run the following commands:
+```
+$ cd ~catkin_ws/src/tutorials/scripts
+$ python3 sample.py
+```
+This will run the 'Robot Control Center' on this terminal. What this means is that all of the robot's instructions and movements will be regulated via this terminal or node. Leave this terminal running again.
+
+
+### Terminal 5
+On this terminal, you will once again have to enter the robot using the following command:
+```
+$ ssh robot@ev3dev.local
+```
+Enter the password to access the robot. After the robot has been successfully accessed, run the following commands:
+```
+$ cd ~catkin_ws/src/tutorials/scripts
+$ rosrun tutorials test.py
+```
+This will run the ROS Node on the LEGO EV3 Robot to communicate with the PC.
