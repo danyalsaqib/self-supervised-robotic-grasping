@@ -34,9 +34,10 @@ industries that will greatly benefit from a solution to this problem include the
 <li>Ubuntu install of ROS Noetic: http://wiki.ros.org/noetic/Installation/Ubuntu</li>
 <li>Installing Catkin: http://wiki.ros.org/catkin</li>
 </ul>
-After ROS has been installed on both the machines, the next step is to make a new catkin workspace. On your PC, open up the terminal and run the following commands:
-<code>
-lol.no
-pol.no
-</code>
+After ROS has been installed on both the machines, the next step is to make a new catkin workspace. On your PC, open up the terminal and run the following commands line by line:
 </p>
+```
+function test() {
+  console.log("notice the blank line before this function?");
+}
+```
