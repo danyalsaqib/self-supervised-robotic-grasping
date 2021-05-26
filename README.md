@@ -37,7 +37,7 @@ The LEGO EV3 kits are set up in such a way that we work with 3 motors, each conn
 
 Apart from the robot itself, a webcam is needed to act as the **robot's eyes**. While a laptop's built in webcam may theoretically work, we recommend working with a USB webcam, that can be set up appropriately so as to be able to clearly view the object.
 
-![setup](https://user-images.githubusercontent.com/60542092/119741202-ab1f5680-be9e-11eb-91bb-c7b68414094a.jpeg)
+![setup](https://user-images.githubusercontent.com/60542092/119741202-ab1f5680-be9e-11eb-91bb-c7b68414094a.jpeg "The Hardware Setup")
 
 ## Software Setup and Installation
 The project involves 2 nodes - the PC and the LEGO EV3 Robot. Both of them require ROS to be installed on them. Our particular setup had Debian Linux installed on the EV3 LEGO Brick, and ROS Noetic on our Ubuntu Linux Machine. We will assume in this walkthrough that ROS is installed on both the EV3 Lego kit and on your PC. You can follow the links below for thorough guidance:
@@ -138,9 +138,9 @@ $ rosrun tutorials test.py
 This will run the ROS Node on the LEGO EV3 Robot to communicate with the PC.
 
 After all 5 nodes are running, the setup will look something like this:
-![Interfacing](https://user-images.githubusercontent.com/60542092/119740963-3ea45780-be9e-11eb-9e03-9c90eb2fbf6f.PNG)
+![Interfacing](https://user-images.githubusercontent.com/60542092/119740963-3ea45780-be9e-11eb-9e03-9c90eb2fbf6f.PNG "All 5 terminals running - Complete Setup")
 
 ## Data Collection
 If you have successfully completed all of the previous steps, your setup is complete and ready to run the complete setup and initiate data collection. To initiate, simply place an object below the grasping claw of the robot. The Ultrasonic sensor will detect the object and signal the PC that an object has been detected. The webcam will take a picture of the object, run the CNN on it, obtain a prediction of the optimal grasping angle, and send it back to the robot. The robot will then attempt a grasp with that particular angle, and determine whether it was a success or not. This grasp feedback will then be sent back to the PC, and the image will be saved in the directory 'CNN Training/Training Images'. The image names will encode all of the relevant information about that particular image. The first number in the name of the image  will be either a 0 or a 1. This signals whether this particular grasp was successful or not. The next number is the angle of grasp divided by 10. For example, if the image is named '0_11_train_img_10.png', this means that this particular grasp was unsuccessful, and the grasp angle was 11 * 10 = 110 degrees. Hence, the image name in itself encodes information about the grasp. Some example images have been saved in this github repository under the 'CNN Training/ Training Images' folder.
 
-![Dataset Multiplication](https://user-images.githubusercontent.com/60542092/119741267-cdb16f80-be9e-11eb-80a8-5531a4560cf9.PNG)
+![Dataset Multiplication](https://user-images.githubusercontent.com/60542092/119741267-cdb16f80-be9e-11eb-80a8-5531a4560cf9.PNG "Dataset Generation and Multiplication")
