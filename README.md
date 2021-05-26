@@ -148,4 +148,4 @@ If you have successfully completed all of the previous steps, your setup is comp
  
  ## FAQs and Troubleshooting
  - **When I click the 'Click to start Object Detection' button, I get an error.**
- - On the PC, open the file 'catkin_ws/src/tutorials/OD_Script.py'. Here on line 41, notice the code `cap = cv2.VideoCapture(0)`. Try changing this value from 0 to 1,2,3.. etc.
+ > On the PC, open the file 'catkin_ws/src/tutorials/OD_Script.py'. Here on line 41, notice the code `cap = cv2.VideoCapture(0)`. Try changing this value from 0 to 1,2,3.. etc.
