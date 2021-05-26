@@ -32,5 +32,11 @@ industries that will greatly benefit from a solution to this problem include the
 <ul>
 <li>Installing ROS on a LEGO EV3 Brick: http://wiki.ros.org/Robots/EV3</li>
 <li>Ubuntu install of ROS Noetic: http://wiki.ros.org/noetic/Installation/Ubuntu</li>
+<li>Installing Catkin: http://wiki.ros.org/catkin</li>
 </ul>
+After ROS has been installed on both the machines, the next step is to make a new catkin workspace. On your PC, open up the terminal and run the following commands:
+```
+lol.no
+pol.no
+```
 </p>
