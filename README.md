@@ -9,6 +9,7 @@ during the training process. The idea is to make a robot that is less costly, sm
 <h2>Introduction</h2>
 The basic problem our project is trying to solve is dynamic robot grasping. Currently, solving this particular problem is a critical challenge in robotics. Robots are already very good at working in tightly monitored, closed, and predictable environments such as assembly lines in factories. This is because in such environments, the robotic hand has to pick up the same object, with the same geometric shape, from the same position over and over again. As such, the problem is very much static in that the robotic hand can be built and programmed for that specific task.
 
+
 The idea to use robot hand-eye coordination and visual servoing dates back to 1979. However, building or programming a robotic hand that can successfully grasp different objects with
 a variety of shapes and sizes still remains a challenge in both the industry, and academia. This is an unmet need, especially in industries where robots are required to grasp numerous
 geometrically different objects in a dynamic environment. Several different approaches have been tried and tested for this problem, with varying degrees of success. However, the recent
