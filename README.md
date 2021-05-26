@@ -35,7 +35,8 @@ The project involves 2 nodes - the PC and the LEGO EV3 Robot. Both of them requi
 - Installing Catkin: http://wiki.ros.org/catkin
 After ROS has been installed on both the machines, the next step is to make a new catkin workspace. On your PC, open up the terminal and run the following commands line by line:
 ```
-function test() {
-  console.log("notice the blank line before this function?");
-}
+cd ~
+mkdir catkin_ws
+cd catkin_ws
+catkin_make
 ```
