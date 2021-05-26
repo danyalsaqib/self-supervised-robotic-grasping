@@ -146,6 +146,6 @@ If you have successfully completed all of the previous steps, your setup is comp
 
 ![Dataset Multiplication](https://user-images.githubusercontent.com/60542092/119741267-cdb16f80-be9e-11eb-80a8-5531a4560cf9.PNG "Dataset Generation and Multiplication")
  
-> ## FAQs and Troubleshooting
-> - **When I click the 'Click to start Object Detection' button, I get an error.**
-> On the PC, open the file 'catkin_ws/src/tutorials/OD_Script.py'. Here on line 41, notice the code `cap = cv2.VideoCapture(0)`. Try changing this value from 0 to 1,2,3.. etc.
+## FAQs and Troubleshooting
+- **When I click the 'Click to start Object Detection' button, I get an error.**
+ - On the PC, open the file 'catkin_ws/src/tutorials/OD_Script.py'. Here on line 41, notice the code `cap = cv2.VideoCapture(0)`. Try changing this value from 0 to 1,2,3.. etc.
