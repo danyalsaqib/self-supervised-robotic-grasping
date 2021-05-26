@@ -138,6 +138,7 @@ $ rosrun tutorials test.py
 This will run the ROS Node on the LEGO EV3 Robot to communicate with the PC.
 
 After all 5 nodes are running, the setup will look something like this:
+
 ![Interfacing](https://user-images.githubusercontent.com/60542092/119740963-3ea45780-be9e-11eb-9e03-9c90eb2fbf6f.PNG "All 5 terminals running - Complete Setup")
 
 ## Data Collection
