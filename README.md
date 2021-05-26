@@ -110,7 +110,7 @@ On this terminal, run the following commands:
 $ cd ~catkin_ws/src/tutorials
 $ rosrun tutorials nodeA.py
 ```
-This will start up the ROS node on your PC for communication with your EV3 robot setup.
+This will start up the ROS node on your PC for communication with your EV3 robot setup. Leave this terminal running as well.
 
 ### Terminal 4
 On this terminal, you will have to enter the robot using the following command:
