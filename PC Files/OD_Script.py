@@ -96,12 +96,12 @@ def Lol():
         print("Image Write Success: ", cv2.imwrite(os.path.join('train_img_'+str(gc)+'.png'), img))
         os.chdir('/home/dani/catkin_ws/src/tutorials')
         cv2image = cv2.cvtColor(img, cv2.COLOR_BGR2RGBA)
-        im = PIL.Image.fromarray(cv2image)
-        im1 = im.convert('RGB')
-        img_nn_mod = data_transforms(im1)
+        im = PIL.Image.fromarray(cv2image) 
+        im1 = im.convert('RGB')		# Image converted to RGB
+        img_nn_mod = data_transforms(im1)	# Appropriate transforms applied to image
         img_nn_mod = img_nn_mod.unsqueeze(0)  # if torch tensor
-        outputs = model_ft(img_nn_mod)
-        _, preds = torch.max(outputs, 1)
+        outputs = model_ft(img_nn_mod)	# Image being passed through CNN
+        _, preds = torch.max(outputs, 1)	# Obtained Predicted Class
         angle = int(preds) * 10
         angle = angle - 90
         angle = angle / 90
@@ -109,7 +109,7 @@ def Lol():
         print("Prediction Class:", int(preds) * 10)
         print("Mapped Output: ", angle)
         f = open("cnnoutput.txt", "w")
-        f.write(str(0.4) + "\n")
+        f.write(str(0.5) + "\n")
         f.write(str(angle))
         f = open("gc_file.txt", "w")
         f.write(str(gc))
@@ -124,7 +124,7 @@ def Lol():
         f = open("graspfeedback.txt", "r")
         rnm_var = int(f.read())
         os.chdir('/home/dani/catkin_ws/src/tutorials/CNN Training/Training Images')
-        os.rename(os.path.join('train_img_' + str(gc) + '.png'), os.path.join(str(rnm_var) + '_train_img_' + str(gc) + '.png'))
+        os.rename(os.path.join('train_img_' + str(gc) + '.png'), os.path.join(str(rnm_var) + '_' + str(int(preds))+ '_train_img_' + str(gc) + '.png'))
         os.chdir('/home/dani/catkin_ws/src/tutorials')
 
         gc = gc + 1
