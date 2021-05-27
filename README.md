@@ -44,6 +44,7 @@ The project involves 2 nodes - the PC and the LEGO EV3 Robot. Both of them requi
 - Installing ROS on a LEGO EV3 Brick: http://wiki.ros.org/Robots/EV3
 - Ubuntu install of ROS Noetic: http://wiki.ros.org/noetic/Installation/Ubuntu
 - Installing Catkin: http://wiki.ros.org/catkin
+
 After ROS has been installed on both the machines, the next step is to make a new catkin workspace. On your PC, open up the terminal and run the following commands line by line:
 ```
 $ mkdir -p ~/catkin_ws/src
