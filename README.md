@@ -58,14 +58,14 @@ $ mkdir tutorials
 ```
 After all of the files have been copied to this directory, run the following lines on the terminal again:
 ```
-cd ~catkin_ws
-catkin_make
+$ cd ~catkin_ws
+$ catkin_make
 ```
 Hopefully, we should be all set up now on the PC. We will now move on to setting stuff up on the robot.
 
 Firstly, to access the robot via any one of your PC terminals, connect the LEGO EV3 brick to your PC via the USB cable, and run the following command from your Ubuntu machine:
 ```
-ssh robot@ev3dev.local
+$ ssh robot@ev3dev.local
 ```
 You will now be asked to enter a password. This password is ***maker*** by default, but you may have changed it for your particular setup. Enter the password, and you will be able to access the robot's files. Here, again run the following commands:
 ```
@@ -82,8 +82,8 @@ $ mkdir scripts
 ```
 After all of the files are successfully copied onto the robot, run the following command:
 ```
-cd ~catkin_ws
-catkin_make
+$ cd ~catkin_ws
+$ catkin_make
 ```
 Wait for the `catkin_make` to complete. After that has been complete, we are ready to run our complete setup for self supervised robotic grasping.
 
