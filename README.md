@@ -98,7 +98,7 @@ $ roscore
 On this terminal, the roscore will start running. The roscore is what enables communication between the robot and the PC. Leave the roscore running on this terminal.
 
 ### Terminal 2
-On this terminal, run the following commands
+On this terminal, run the following commands:
 ```
 $ cd ~catkin_ws/src/tutorials
 $ python3 OD_Script.py
