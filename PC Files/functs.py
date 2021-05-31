@@ -29,7 +29,7 @@ classNames = []
 model_ft = models.resnet18()
 num_ftrs = model_ft.fc.in_features
 model_ft.fc = nn.Linear(num_ftrs, 18)
-model_ft.load_state_dict(torch.load('fyp_cnn.pt'))
+model_ft.load_state_dict(torch.load('fyp_cnn_updated.pt'))
 
 def findObjects(outputs, img, classNames):
     hT, wT, cT = img.shape
