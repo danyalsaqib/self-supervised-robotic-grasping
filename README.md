@@ -1,5 +1,7 @@
 # Self Supervised Robotic Grasping
-This is a repository containing files and folders for our implementation of a Self Supervised Robot, capable of learning robotic grasping on its own.
+This is a repository containing files and folders for our implementation of a Self Supervised Robot, capable of learning robotic grasping on its own. Created in collaboration with:
+- Salman Nasir: https://github.com/salmannasirr
+- Obaid ur Rahman
 
 ## Abstract
 Learning Based Robot Grasping currently involves the use of labeled data. This approach has two major disadvantages. Firstly, labeling data for grasp points and angles is a strenuous process, so the dataset remains limited. Secondly, human labeling is prone to bias due to semantics.
